@@ -18,11 +18,9 @@
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 					<h1><strong>Mark Nicholson</strong><br />
-					Programming Portfolio
-					<br /> </h1>
-
-					<ul class="actions">
-						<li><a href="https://marknicholsondev.github.io/" class="button" target= "_blank">Return to homepage</a></li>
+					Programming Portfolio <br /> </h1>
+					<ul>
+						<a href="https://marknicholsondev.github.io/" class="button" target= "_blank">Return to homepage</a>
 					</ul>
 				</div>
 			</header>
@@ -35,20 +33,48 @@
 						<header class="major">
 							<h2>OpenGL Graphics Project</h2>
 						</header>
-						<p> My name is Mark and I'm a student of Games Development at Newcastle University
-							who aspires to have a hand in crafting worlds and experiences
-							for people to enjoy and remember.
+						<p> 
+							This project uses a graphics engine built from scratch utilising
+							OpenGL and various graphical techniques such as triplanar mapping,
+							multi-texturing with bump mapping and blending.
 						</p>
+						<p> 
+							This was an opportunity to build up fundamentals of traditional
+							rendering techniques with the OpenGL API, a list of techniques can be
+							found on the project GitHub Repository.
+						</p>
+							Easily, the biggest problem I faced in this project was the texturing techniques
+							such as triplanar mapping in particular. This was primarily due to wanting to reuse
+							my triplanar mapping function from my procedural island generation tool, which was
+							written in C# and the conversion more tedious than expected. Instead, I rewrote the script
+							entirely and managed to get it working correctly, but this process wasted valuable
+							development time for implementing Cook-Torrence PBR into the project.
+						</p>
+						<p> 
+							The engine at this point has no physics element, which is later added in the OpenGL
+							physics project.
+						</p>
+						<h3>Project Showcase</h3>
+						<iframe width="700" height="400"
+						src="https://www.youtube.com/embed/9xv2l0AuQ2w?autoplay=0&mute=0">
+						</iframe>
 					</section>
 
+					
 				<!-- Two -->
 					<section id="two">
-						<h2>Featured Projects</h2>
+						<h2>Feature Screenshots</h2>
 						<div class="row">
 							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Screenshot of texturing techniques</h3>
-								<p> Details here
+								<a href="images/fulls/triplanar.jpg" class="image fit thumb"><img src="images/thumbs/triplanar.jpg" alt="" /></a>
+								<h3>Triplanar Mapping implementation</h3>
+								<p> Top is with Triplanar Mapping applied, Bottom is without.
+								</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/fulls/bumpmapping.jpg" class="image fit thumb"><img src="images/thumbs/bumpmapping.jpg" alt="" /></a>
+								<h3>Multi-texturing with bump mapping</h3>
+								<p> Note the specular highlights on the river bank.
 								</p>
 							</article>
 						</div>
@@ -381,13 +407,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/MarkNicholsonDev" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://drive.google.com/file/d/1vVQ-QWbiKgh1w8q6OVzt1a8pvSXKuHfL/view?usp=share_link" class="icon brands fa-readme"><span class="label">CV</span></a></li>
+						<li><a href="https://www.linkedin.com/in/mark-nicholson-dev/" target= "_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/MarkNicholsonDev" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://drive.google.com/file/d/1vVQ-QWbiKgh1w8q6OVzt1a8pvSXKuHfL/view?usp=share_link" target= "_blank" class="icon brands fa-readme"><span class="label">CV</span></a></li>
 					</ul>
 					<div>Email: mark.nicholson34@gmail.com</div>
 					<ul class="copyright">
-						<li>Made with: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Made with template from: <a href="http://html5up.net" target= "_blank">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
