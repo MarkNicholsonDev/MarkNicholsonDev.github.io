@@ -38,12 +38,32 @@
 							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/ProceduralIslandGenerationTool" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
 						</header>
 						<p> 
-							Project summary under construction.
+							This project was created as part of my dissertation during my MComp. To aim was to create a tool
+							for entirely procedurally generated islands to attempt to test the limits of PCG techniques to imitate a
+							island created by game artists.
 						</p>
-						<h3>Project Showcase</h3>
-						<iframe width="700" height="400"
-						src="#">
-						</iframe>
+						<p> 
+							Firstly, the tool contains a large amount of features, a list of which can be found on the project GitHub Repository.
+						</p>
+						<p>
+							To summarise what the project does, on playing the project a large grid of islands will be procedurally generated, the
+							only parts not generated is the textures themselves and the models for the vegetation. In terms of the islands themselves,
+							the meshes of each island have 3 auto-generated LOD models done by skipping vertices within the mesh on generation. These meshes
+							are then textured, with the help of a custom height-based texture shader using a layer system. Then, trees are placed through the same layer system
+							off of spawning percentages per vertice on the island to form the final island. To finish the aesthetic side a water shader is added to make it more
+							visually appealing.
+						</p>
+						<p>
+							Then there is a chunk loading system which spawns island chunks based on defined view distances. The LOD model of each island is reduced based
+							off distance from the player position, represented by a red cube in the sky. This system results in high detail close to the player and at distance,
+							the general silhouette of each island remains the same but reducing the vertice count dramatically increasing performance.
+						</p>
+						<p>
+							The project was created with fine tuning and customisablity so the UI was integrated into the inspector window in the Unity Editor,
+							this is also done through scriptable data objects for texturing, terrain and noise control which can be dragged and dropped to apply.
+
+							As a note, this project was heavily researched as part of my dissertation and a list of sources used can be provided upon request.
+						</p>
 					</section>
 
 					
@@ -52,9 +72,15 @@
 						<h2>Feature Screenshots</h2>
 						<div class="row">
 							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/triplanar.jpg" class="image fit thumb"><img src="images/thumbs/triplanar.jpg" alt="" /></a>
-								<h3>Sample screenshot</h3>
-								<p> Some Text
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>Screenshot of Island at max LOD</h3>
+								<p> Note the number of vertices of islands in the distance.
+								</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/fulls/lod.jpg" class="image fit thumb"><img src="images/thumbs/lod.jpg" alt="" /></a>
+								<h3>Screenshot of chunk loading and LOD system</h3>
+								<p> In wireframe mode the vertice count is noticably different, darker being higher vertice count.
 								</p>
 							</article>
 						</div>

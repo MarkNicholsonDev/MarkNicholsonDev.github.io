@@ -38,12 +38,29 @@
 							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/OpenGLPhysicsAIProject" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
 						</header>
 						<p> 
-							Project summary under construction.
+							This project uses a physics engine built from scratch along with
+							different AI types to be used. This was built as follow up to the graphics project
+							to experiment with different physics based game mechanics and different AI implementations
+							of varying complexity.
 						</p>
-						<h3>Project Showcase</h3>
-						<iframe width="700" height="400"
-						src="#">
-						</iframe>
+						<p> 
+							The aim in the demo is to collect coins and use physics based movement to navigate the map while avoiding the AI.
+							However, it should be noted this was mainly just a experiment for different mechanics, a list of which can be found
+							in the project GitHub Repository.
+						</p>
+						<p> 
+							The physics aspect contains an implementation of Newtonian physics along with, collision detection and resolution systems
+							to simulate physically correct behaviour in objects and the environment. In terms of game mechanics, distance constraints were
+							used to simulate rope in multiple instances such as a grappling hook, tethering of objects together and a rope bridge. Another
+							feature was modelling explosions and the forces they exert onto the objects around them. These explosions dynamically scale based on distance
+							from the point of explosion and can impact multiple objects within range.
+						</p>
+						<p> 
+							AI was showcased in multiple ways from simple state machines for controlling moving platforms to AI opponents using behaviour
+							trees. The behaviour tree allows for modelling more complex behaviours and transitions between those behaviours. These AI also
+							used a simple pathfinding grid with an implementation of A* pathfinding. AI wasn't just used for AI agents, it was also
+							used to control the menu system through Pushdown Automata to control the game state.
+						</p>
 					</section>
 
 					
@@ -52,9 +69,17 @@
 						<h2>Feature Screenshots</h2>
 						<div class="row">
 							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/triplanar.jpg" class="image fit thumb"><img src="images/thumbs/triplanar.jpg" alt="" /></a>
-								<h3>Sample screenshot</h3>
-								<p> Description of screenshot
+								<a href="images/fulls/physics1.jpg" class="image fit thumb"><img src="images/thumbs/physics1.jpg" alt="" /></a>
+								<h3>Small parkour course</h3>
+								<p> 
+									A testing area for the different items available to the player.
+								</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/fulls/physics2.jpg" class="image fit thumb"><img src="images/thumbs/physics12jpg" alt="" /></a>
+								<h3>Small parkour course</h3>
+								<p> 
+									Another part of testing area loading to the maze containing the goose AI agent.
 								</p>
 							</article>
 						</div>
