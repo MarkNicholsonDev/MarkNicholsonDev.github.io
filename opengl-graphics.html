@@ -37,6 +37,7 @@
 							<h2>OpenGL Graphics Project</h2> 
 							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/OpenGLGraphicsProject" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
 						</header>
+						<h3>Summary of Project:</h3>
 						<p> 
 							This project uses a graphics engine built from scratch utilising
 							OpenGL and various graphical techniques such as triplanar mapping,
@@ -47,7 +48,45 @@
 							rendering techniques with the OpenGL API, a list of techniques can be
 							found on the project GitHub Repository.
 						</p>
-						<p> 
+						<h3>Feature List:</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Triplanar Mapping</td>
+										<td>Used to correctly texture steep surfaces such as cliff faces</td>
+									</tr>
+									<tr>
+										<td>Bump mapping</td>
+										<td>Provides more accurate specular lighting effects on surfaces</td>
+									</tr>
+									<tr>
+										<td>Scene Graph</td>
+										<td>Used to arrange object meshes within the scene and rendering based off object transparency</td>
+									</tr>
+									<tr>
+										<td>Blinn-Phong Lighting</td>
+										<td>Directional light used to light the scene</td>
+									</tr>
+									<tr>
+										<td>Anisotropic Filtering</td>
+										<td>16x Anisotropic filtering applied onto each texture within the scene</td>
+									</tr>
+									<tr>
+										<td>Mipmapping & Texture Filtering</td>
+										<td>Applied to each texture within the scene to avoid artifacts at textures in the distance</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3>Problems with Project:</h3>
+						<p>
 							Easily, the biggest problem I faced in this project was the texturing techniques
 							such as triplanar mapping in particular. This was primarily due to wanting to reuse
 							my triplanar mapping function from my procedural island generation tool, which was
@@ -55,7 +94,7 @@
 							entirely and managed to get it working correctly, but this process wasted valuable
 							development time for implementing Cook-Torrence PBR into the project.
 						</p>
-						<p> 
+						<p>
 							The engine at this point has no physics element, which is later added in the OpenGL
 							physics project.
 						</p>

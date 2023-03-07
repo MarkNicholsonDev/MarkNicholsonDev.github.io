@@ -45,7 +45,7 @@
 						</p>
 						<p> 
 							The aim in the demo is to collect coins and use physics based movement to navigate the map while avoiding the AI.
-							However, it should be noted this was mainly just a experiment for different mechanics, a list of which can be found
+							However, it should be noted this was mainly just a experiment for different mechanics, a list of which can be found below &
 							in the project GitHub Repository.
 						</p>
 						<p> 
@@ -61,6 +61,47 @@
 							used a simple pathfinding grid with an implementation of A* pathfinding. AI wasn't just used for AI agents, it was also
 							used to control the menu system through Pushdown Automata to control the game state.
 						</p>
+						<h3>Feature List:</h3>
+						<div class="table-wrapper">
+							<table class="alt">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Grappling Hook</td>
+										<td>Created from a chain of distance constraints to simulate the physics of a rope</td>
+									</tr>
+									<tr>
+										<td>Rope Tethering</td>
+										<td>Allows the player to tie two objects together with a fixed length of rope</td>
+									</tr>
+									<tr>
+										<td>Simple Rocket</td>
+										<td>Causes an explosion on mouse click, with scaling explosive force based off distance to the center of the explosion</td>
+									</tr>
+									<tr>
+										<td>Behaviour Tree AI agent (Goose)</td>
+										<td>The AI uses a behaviour tree with multiple different behaviours and transition states between them.</td>
+									</tr>
+									<tr>
+										<td>Menu System</td>
+										<td>Controlled by Pushdown Automata which pushes and pops game states similarly to a stack allowing for easy movement between states</td>
+									</tr>
+									<tr>
+										<td>Simple State machine AI (Moving platform)</td>
+										<td>Platform which moves side to side based off of a timer</td>
+									</tr>
+									<tr>
+										<td>Maze generation</td>
+										<td>Done via reading in a txt file allowing for half walls, walls and open areas to be spawned in</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</section>
 
 					
