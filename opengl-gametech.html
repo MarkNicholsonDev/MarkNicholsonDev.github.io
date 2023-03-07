@@ -23,7 +23,7 @@
 						
 					</p>
 					<ul>
-						<a href="https://marknicholsondev.github.io/" class="button" target= "_blank">Return to homepage</a>
+						<a href="https://marknicholsondev.github.io/" class="button">Return to homepage</a>
 					</ul>
 				</div>
 			</header>
@@ -37,6 +37,7 @@
 							<h2>OpenGL Physics and AI Project</h2> 
 							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/OpenGLPhysicsAIProject" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
 						</header>
+						<h3>Summary of Project</h3>
 						<p> 
 							This project uses a physics engine built from scratch along with
 							different AI types to be used. This was built as follow up to the graphics project
@@ -48,20 +49,7 @@
 							However, it should be noted this was mainly just a experiment for different mechanics, a list of which can be found below &
 							in the project GitHub Repository.
 						</p>
-						<p> 
-							The physics aspect contains an implementation of Newtonian physics along with, collision detection and resolution systems
-							to simulate physically correct behaviour in objects and the environment. In terms of game mechanics, distance constraints were
-							used to simulate rope in multiple instances such as a grappling hook, tethering of objects together and a rope bridge. Another
-							feature was modelling explosions and the forces they exert onto the objects around them. These explosions dynamically scale based on distance
-							from the point of explosion and can impact multiple objects within range.
-						</p>
-						<p> 
-							AI was showcased in multiple ways from simple state machines for controlling moving platforms to AI opponents using behaviour
-							trees. The behaviour tree allows for modelling more complex behaviours and transitions between those behaviours. These AI also
-							used a simple pathfinding grid with an implementation of A* pathfinding. AI wasn't just used for AI agents, it was also
-							used to control the menu system through Pushdown Automata to control the game state.
-						</p>
-						<h3>Feature List:</h3>
+						<h3>Feature List</h3>
 						<div class="table-wrapper">
 							<table class="alt">
 								<thead>
@@ -102,6 +90,40 @@
 								</tbody>
 							</table>
 						</div>
+						<h3>Highlights of Project</h3>
+						<p> 
+							The physics aspect contains an implementation of Newtonian physics along with, collision detection and resolution systems
+							to simulate physically correct behaviour in objects and the environment. In terms of game mechanics, distance constraints were
+							used to simulate rope in multiple instances such as a grappling hook, tethering of objects together and a rope bridge. Another
+							feature was modelling explosions and the forces they exert onto the objects around them. These explosions dynamically scale based on distance
+							from the point of explosion and can impact multiple objects within range.
+						</p>
+						<p> 
+							AI was showcased in multiple ways from simple state machines for controlling moving platforms to AI opponents using behaviour
+							trees. The behaviour tree allows for modelling more complex behaviours and transitions between those behaviours. These AI also
+							used a simple pathfinding grid with an implementation of A* pathfinding. AI wasn't just used for AI agents, it was also
+							used to control the menu system through Pushdown Automata to control the game state.
+						</p>
+						<p> A couple examples of improvements this would be: </p>
+						<ul>
+							<li>Implementation of more advanced collision system with features like OBB & capsule support and collision layers </li>
+							<li>Finer polishing of the AI in terms of trying to add more behaviour states rather than just chase, search and patrol e.g. maybe implement variance in the patrol routes</li>
+							<li>A basic implementation of client server multiplayer since I hadn't really explored networking too much with implementation of synced movement between clients etc</li>
+						</ul>
+						<h3>Problems with Project</h3>
+						<p>
+							In terms of collision detection the engine currently lacks support for OBBs, collision manifolds and collision layer support. With the collision
+							layer system, this would allow for assigning layers similarly to Unity where you can make objects not collide/interact based off these defined layers. This mainly
+							for more complex physics interactions between objects. The addition of OBB collisions and collision manifolds would allow for more accurate collision detection by
+							detecting areas of collision on the surface of an object rather than a singular point of contact. From that manifold we can more accurately model torque being applied
+							onto an object meaning the rotation of objects are more realistic depending on where they collide and how much collides.
+						</p>
+						<p>
+							I think because this project was more focused on experimentation I covered more of a breadth of techniques. This breadth meant that in places the mechanics lacked polish or detailing
+							to make them true game mechanics which was a little disappointing. Some examples of this include the rope swinging not using a raycast off of the center of the camera
+							and instead off of mouse click which made it difficult to use. Also, range checks on the distance of the rope being cast to prevent accidental slingshotting across the map
+							but also, a visual indicator of the rope like I did for the tethering which was a product of a lack of time on my part for polishing the mechanics.
+						</p>
 					</section>
 
 					
@@ -117,7 +139,7 @@
 								</p>
 							</article>
 							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/physics2.jpg" class="image fit thumb"><img src="images/thumbs/physics2jpg" alt="" /></a>
+								<a href="images/fulls/physics2.jpg" class="image fit thumb"><img src="images/thumbs/physics2.jpg" alt="" /></a>
 								<h3>Small parkour course</h3>
 								<p> 
 									Another part of testing area loading to the maze containing the goose AI agent.
