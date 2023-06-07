@@ -38,10 +38,10 @@
 							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/MultiplayerFPSTeamProject" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
 						<h3>Summary of Project</h3>
 						<p> 
-							This project was created as part of my MComp. The aim was to create a splatoon-like multiplayer FPS game with objectives to capture
-							in a small arena map. In terms of my contribution, I created the Painting system for the game where we could paint onto any surface within the Level
-							and these paints would provide varying effects to the players and enemies within the arena similarly to Portal 2 style gels.
-						</p>
+							This project was created as part of my MComp. The aim was to create a Splatoon-like multiplayer FPS game with objectives to capture
+							in a small arena map.</p>
+						<p>In terms of my contribution, I created the Painting system for the game where we could paint onto any surface within the Level
+							and these paints would provide varying effects to the players and enemies within the arena similarly to Portal 2 style gels.</p>
 						<h4>Feature List</h4>
 						<div class="table-wrapper">
 							<table class="alt">
@@ -55,15 +55,14 @@
 									<tr>
 										<td>Painting of objects</td>
 										<td>Primary game mechanic in the game used to help maneuver around the map with speed and jump paints along with other utility paints,
-											e.g. blinding, slow and slippy paints to hinder enemies.
-										</td>
+											e.g. blinding, slow, and slippery paints to hinder enemies.</td>
 									</tr>
 									<tr>
 										<td>Objective flags</td>
 										<td>Randomly placed around the map to be collected to win the game.</td>
 									</tr>
 									<tr>
-										<td>Multiplayer and solo and splitscreen</td>
+										<td>Multiplayer and solo and split-screen</td>
 										<td>Allows for many ways to play the game, we tested with 8 players in 4v4 and the server supported it well.</td>
 									</tr>
 									<tr>
@@ -75,8 +74,8 @@
 						</div>
 						<h3>Highlights of my contribution and how it works</h3>
 						<p>
-							The painting works by storing a paint mask with each paintable game object which is a blank texture with the same aspect ratio as the object's texture.
-							This paint mask is what is painted to and then combined with the original texture in the main scene shader to be applied over top of the original texture to create
+							The painting works by storing a paint mask with each paintable game object, which is a blank texture with the same aspect ratio as the object's texture.
+							This paint mask is what is painted to and then combined with the original texture in the main scene shader to be applied over the top of the original texture to create
 							the appearance of painted surfaces. 
 						</p>
 						<p>
@@ -86,14 +85,14 @@
 							projection between the direction to the ray origin and the normal of the triangle.
 						</p>
 						<p>
-							If the triangle faces the ray origin we do a sphere triangle checkto see if the current vertice is within the range of the paint. If it is, then
+							If the triangle faces the ray origin we do a sphere triangle check to see if the current vertice is within the range of the paint. If it is, then
 							we calculate the corresponding UV in the object texture and paint that same UV in
 							the paint mask resulting in accurate painting of surfaces which face in the direction of the splat/paint position.
 						</p>
 						<h3>Improvements to the Painting system</h3>
 						<p>
-							One of the key issues with the system at this time is that it only works on objects without duplicated UV coordinates which can be quite awkward if using
-							assets on the asset store. To solve this you can generate new UVs for the object in Blender which is a pain, if the idea is used in a studio with
+							One of the key issues with the system at this time is that it only works on objects without duplicated UV coordinates, which can be quite awkward if using
+							assets on the asset store. To solve this you can generate new UVs for the object in Blender which is a pain for complex meshes, if the idea is used in a studio with
 							artists this is less of an issue and more of a consideration.
 						</p>
 						<p>
@@ -106,15 +105,21 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Feature Screenshots</h2>
-						<p>
-							Currently there isn't any screenshot available as I've not had a chance to grab some but here's a placeholder.
-						</p>
 						<div class="row">
 							<article class="col-4 col-12-xsmall work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Screenshot of Placeholder</h3>
-								<p> 
-								</p>
+								<h3>Screenshot of all available Paints</h3>
+								<p> Each of these paints has their own attributes that apply effects if stepped onto.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/fulls/PaintCloseup.jpg" class="image fit thumb"><img src="images/thumbs/PaintCloseup.jpg" alt="" /></a>
+								<h3>Closeup of Speed Paint</h3>
+								<p> Note the specular highlights, procedural texture for the paint texture and the splatter around the outside.</p>
+							</article>
+							<article class="col-4 col-12-xsmall work-item">
+								<a href="images/fulls/PaintBlending.jpg" class="image fit thumb"><img src="images/thumbs/PaintBlending.jpg" alt="" /></a>
+								<h3>Closeup of Paint Blending</h3>
+								<p> The paints cleanly blend with one another creating a mixed paint in the centre.</p>
 							</article>
 						</div>
 						<ul class="actions">
