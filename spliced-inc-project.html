@@ -34,99 +34,54 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>RTS Pathfinding with Formation Flocking</h2> 
-							<h3>Project Github Repository: <a href="https://github.com/MarkNicholsonDev/ProceduralIslandGenerationTool" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h3>
-							<a href="images/fulls/UnitFormations.gif" class="image fit thumb"><img src="images/thumbs/UnitFormations.gif" alt="" /></a>
+							<h2>Unannounced UE5 Multiplayer Project at Spliced Inc (Multi-Platform)</h2> 
 						</header>
+						<h3>Note on NDA obligations</h3>
+						<p>
+							This project is under NDA, so the details that I can provide are limited.
+							I'm currently discussing permission with Spliced Inc. to share additional materials (such as screenshots) in private interviews.
+						</p>
+						<p>
+							I'm happy to answer any questions about my work and I will do my best to answer those while respecting my ongoing NDA and, if I receive permission,
+							I can share further details about my work in a private call or interview.
+						</p>
+						
 						<h3>Summary of Project</h3>
 						<p> 
-							This project was created as part of my 4th year dissertation during my MComp and the time for development was a little over 2 weeks.
-							The aim was to create a system to control units of soldiers and pathfind the unit efficently around a map and specifically through tight spaces such as a gate,
-							minimising disruption to the unit formation. 
+							During my two and a half years on this project, I worked as an Associate Systems Design Engineer (Technical Designer) in the systems team.
+							The team focused on prototyping and implementing new game mechanics under direction from game designers and the provided design documentation.
+							I owned several systems across the project, including several minigames which were distinct gameplay experiences and systems that players could interact with within the game world.
 						</p>
-						<h3>Feature List</h3>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Unit Selection system</td>
-										<td>Allows for box select, shift select to select multiple units and individual selection.</td>
-									</tr>
-									<tr>
-										<td>Formation Flocking algorithm</td>
-										<td>The main focus of the project. This is effectively a modified flocking algorithm overwriting the boid cohesion rule and using vector summation
-											to control the direction the soliders move in to stay in formation.
-										</td>
-									</tr>
-									<tr>
-										<td>Unit Controller & Pathfinder</td>
-										<td>Each unit is controlled by a empty GameObject Unit which uses a Unity pathfinding agent to path the entire unit around the map and provides unit-wide control
-											such as controlling all aspects of the formation such as the width and depth of the unit and any unit orders and then passes them to the boids to execute them.
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<h3>Highlights of the System and how it works</h3>
+						
+						<h3>Workflow and Responsibilities</h3>
 						<p>
-							The Unit system is rather complex and contains a few main parts those being the formation management, the boid/soldier behaviour and pathfinding(Gate Detection).
+							Features were implemented primarily in Angelscript(a typed scripting language similar to C#) alongside C++ and Blueprint. 
+							Much of my work was improving legacy implementations and polishing for things like multi-platform support to allow for players playing across different platforms within the same game instance to have a similar experience.
 						</p>
 						<p>
-							A brief summary is that each boid has Cohesion and Seperation behaviours which control where they move to, the boid cohesion moves the soldier to their desired position
-							in the formation relative to the unit controller by using a formation offset value stored on the soldier. The unit when created, calculates these formation offsets 
-							based off the desired unit width which can be defined in the inspector but also whenever the unit width is changed at any time. The unit has a Unity pathfinding agent
-							attached which moves the unit around the terrain meaning a unit of 120 soldiers is moved by a single pathfinding agent.
+							The extent of my ownership was of the full technical implementation for these features, along with responsibility for regular playtesting of my content to ensure a high quality stable experience.
+							I often worked on legacy systems that had been passed from other programmers and also created new systems myself from game design documentation.
 						</p>
 						<p>
-							For Unit selection, there are 3 main ways of selecting: Box Select, Shift left clicking(Or box selecting) and just left clicking on a soldier in the unit.
-							The most complex is box selection so that works by taking the starting left click position on screen and the position where is is released, from that we 
-							determine 4 corners which we then raycast from. Then a box collider is created between the 4 world positions raycast to, then any unit contained within
-							is gives each soldier under it's control a selection component which turns them red. If the ground is clicked at any point the selection is released.
+							My work often extended past pure gameplay scripting to contributing to other parts of the gameplay experience such as prototype UI implemented with Common UI and UE5's sequencer for creating cinematics.
+						</p>
+						
+						<h3>Retrospective on Spliced</h3>
+						<p>
+							Since I joined mid-development many systems were already in place, often in a initial prototype form but needed significant improvements e.g. improvements to game feel, polish and platform parity across all supported platforms.
+							I particularly enjoyed working on these legacy systems and making sure these features aligned with the creative vision/intended design from the designer and the documentation and ensuring a better overall quality across the project.
+							It was especially satisfying bring these left behind systems up to the same standard as the rest of the project. That often involved technically challenging refactoring work, which made the end result infinitely more rewarding.
 						</p>
 						<p>
-							As a note, this project was heavily researched as part of my dissertation and had a list of sources used for this can be provided upon request.
+							The role involved me doing significant amount of cross-departmental coordination with Art, UI, Animation and Engineering.
+							This often for asset requests or discussing technical or performance considerations for the features and their code implementations which is something I quickly became comfortable with.
 						</p>
-						<h3>Improvements to the System</h3>
-						<p>
-							Here's a basic summary of the main points that I think could be improved and these are discussed in more detail below.
-						</p>
-						<ul>
-							<li>Expand on existing boid behaviour to have Alignment for rotation control of the unit.</li>
-							<li>Add local object avoidance boid behaviour using RVO2 or ORCA.</li>
-							<li>Impove the move orders to take into account the overall orientation of the unit and the click drag to set unit width.</li>
-							<li>Reorganisation of the unit if the formation changes, if the soldier should take the closest position to limit soldiers moving
-								across the entire formation which doesn't make too much sense.</li>
-						</ul>					
-					</section>
 
-					
-				<!-- Two -->
-					<section id="two">
-						<h2>Feature Screenshots & Gifs</h2>
-						<div class="row">
-							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/UnitSelection.gif" class="image fit thumb"><img src="images/thumbs/UnitSelection.gif" alt="" /></a>
-								<h3>Gif of the Unit Selection</h3>
-								<p> 
-									Allows for box select, shift select to select multiple units and individual selection.
-								</p>
-							</article>
-							<article class="col-4 col-12-xsmall work-item">
-								<a href="images/fulls/UnitFormations.gif" class="image fit thumb"><img src="images/thumbs/UnitFormations.gif" alt="" /></a>
-								<h3>Gif of the Unit Formations and Moving</h3>
-								<p> 
-									Note how the units move cleanly through the ranks of the formation due to Seperation behaviours.
-									Also, the minimum allowed rank size is half the unit sizes limiting the unit to a minimum of 2 rows but also minimum of 3 column
-									as defined by minUnitWidth. 
-								</p>
-							</article>
-						</div>
+						<h3>Additional Project Information</h3>
+						<p>
+							<a href="https://willievaldez.github.io/2026-03-04-Spliced_Retrospective/" target= "_blank">A blog post</a> from Willie Valdez, a Staff Engineer who wrote a fantastic retrospective on the project's technical direction.
+							This offers useful context to work referenced here such as our usage of the Angelscript UE5 fork for those interested in the project.
+						</p>
 					</section>
 
 				<!-- HTML Help bits  REM0VE THIS AT THE END PLEASE THANKS FUTURE MARK -->
