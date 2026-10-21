@@ -42,7 +42,7 @@
 							The Toybox is a work-in-progress UE5 multiplayer game framework designed to build up further experience with UE5's broader game systems.
 						</p>
 						<p> 
-							It includes a gameplay gym for testing ideas and prototyping different games and mechanics, allowing for the sharing code and functionality between my prototypes rather than individual projects.
+							It includes a gameplay gym for testing ideas and prototyping different games and mechanics, allowing for the sharing code and functionality between my prototypes rather than creating individual projects for each.
 						</p>
 						
 						<h3>Feature List</h3>
@@ -57,31 +57,39 @@
 								<tbody>
 									<tr>
 										<td>Game Context System</td>
-										<td>Dynamically adds and removes sets of gameplay abilities (and UI is planned) which allows for varied gameplay abilities for various pieces of content.</td>
+										<td>Dynamically adds and removes sets of gameplay abilities and input mappings to the player at runtime, this is fully server authoritative with client side tracking of input bindings triggered by a client RPC.</td>
 									</tr>
 									<tr>
 										<td>Interactable Component</td>
-										<td>Implemented as a component which can be attached onto any AActor to add functionality on interaction or on entering the interaction volume to implement trigger volumes.</td>
+										<td>Implemented as a component which can be attached onto any AActor to add interaction functionality on interacting with or on entering the interaction volume in the case of a trigger volume.</td>
 									</tr>
 									<tr>
 										<td>Minigames</td>
-										<td>Tied into the interaction system, this is a structured way to implement unique gameplay in a organised state machine implementation.</td>
+										<td>Tied into the interaction system, this is a structured way to implement unique gameplay experiences in a organised state machine implementation, this is integrated with the game context system for adding any abilities for the minigame.</td>
+									</tr>
+									<tr>
+										<td>Blacksmithing Minigame</td>
+										<td>WIP prototype with heating and hammering actions to represent the stages of smithing as an example implementation of the minigame system, heavily inspired by Fable II.</td>
 									</tr>
 									<tr>
 										<td>GAS Integration</td>
-										<td>Setup of GAS was implemented by following the setup of the unoffical GAS documentation from Tranek (https://github.com/tranek/GASDocumentation) and UE's offical documentation.</td>
+										<td>Custom GAS integration with ASC on the PlayerState, this supports multiplayer replication across server and client with the ability granting and activation handled by the Game Context system.</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
+						<p> 
+							Quick note to credit that the setup of GAS was implemented with the help of Tranek's <a href="https://github.com/tranek/GASDocumentation" target= "_blank">unoffical GAS documentation</a> which was incredibly helpful and of course using UE's offical documentation.
+						</p>
+						
 						<h3>Planned Features</h3>
 						<p>
-							Here's a list of the different game systems I have planned for implementing in the future:
+							Here's a list of different game systems planned for implementation in the future:
 						</p>
 						<ul>
-							<li>Blacksmithing Minigame - Utilises existing art assets I have previously made for a game jam and it is a good way to test my minigame and game context ability logic.</li>
+							<li>Clean Vertical Slice - A finished Blacksmithing minigame utilising the systems previously created to give a robust example of how they would be used in development.</li>
 							<li>General Game Loop - Consisting of a main menu, loading screens during transition, in game and an options menu.</li>
-							<li>Scene Manager - Create a hub/overworld area to be able to transition between levels.</li>
+							<li>Game/Scene Manager - Create a hub/overworld area to be able to transition between levels.</li>
 							<li>Dialogue System - Implement a barebones dialogue system which can be used to do a simple dialogue with an actor.</li>
 						</ul>
 					</section>
